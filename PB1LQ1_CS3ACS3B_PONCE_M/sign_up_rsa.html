@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Defines the character encoding used by the webpage -->
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the title displayed on the browser tab -->
     <title>RSA Enrollment Forms</title>
-    <script src="https://cdn.jsdelivr.net/npm/jsencrypt@latest/bin/jsencrypt.min.js">
-    </script>
-    
+
+    <!-- Loads the JSEncrypt library for RSA encryption and decryption -->
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt@latest/bin/jsencrypt.min.js"></script>
+
+    <!-- Connects the external CSS file for the page design -->
     <link rel="stylesheet" href="css/sursa.css">
 </head>
 
 <body>
+
+    <!-- Main container that holds the enrollment form and encryption results -->
     <div class="container">
+
+        <!-- Page heading -->
         <h2>Enrollment Form</h2>
+
+        <!-- Enrollment form containing the student's information -->
         <form id="enrollmentForm">
-            <input type="text" id="fullname" placeholder="Full Name" required>
-            <input type="date" id="dob" required>
-            <input type="text" id="year" placeholder="Year Level" required>
-            <select id="gender"><option value="Male">Male</option><option value="Female">Female</option><select>
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="button" id="btnSubmit">Submit & Encrypt</button>
+
+            <!-- Input field for the student's full name -->
+            <input
+                type="text"
+                id="fullname"
+                placeholder="Full Name"
+                required
+            >
+
+            <!-- Input field for the student's date of birth -->
+            <input
+                type="date"
+                id="dob"
+                required
+            >
+
+            <!-- Input field for the student's year level -->
+            <input
+                type="text"
+                id="year"
+                placeholder="Year Level"
+                required
+            >
+
+            <!-- Dropdown menu for selecting gender -->
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <!-- Input field for the student's username -->
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required
+            >
+
+            <!-- Input field for the student's password -->
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+            <!-- Button that triggers RSA encryption through JavaScript -->
+            <button type="button" id="btnSubmit">
+                Submit & Encrypt
+            </button>
+
         </form>
-            <div id="results">
-                <h3>Encryption Results</h3>
-                <div id="output1024"></div>
-                <div id="output3072"></div>
-            </div>
+
+        <!-- Section where the RSA encryption and decryption results are displayed -->
+        <div id="results">
+
+            <!-- Heading for the encryption results -->
+            <h3>Encryption Results</h3>
+
+            <!-- Displays the results using a 1024-bit RSA key -->
+            <div id="output1024"></div>
+
+            <!-- Displays the results using a 3072-bit RSA key -->
+            <div id="output3072"></div>
+
+        </div>
+
     </div>
 
-    <script src="js/sursa.js"></script>   
+    <!-- Connects the external JavaScript file for RSA processing -->
+    <script src="js/sursa.js"></script>
+
 </body>
 </html>
