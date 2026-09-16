@@ -1,179 +1,329 @@
+/* Applies box-sizing to all elements */
 * {
     box-sizing: border-box;
 }
 
+
+/* Styles the main webpage body */
 body {
     margin: 0;
     min-height: 100vh;
+
+    /* Sets the font used throughout the webpage */
     font-family: Arial, Helvetica, sans-serif;
+
+    /* Creates a light lavender gradient background */
     background: linear-gradient(
         135deg,
         #f4efff,
         #eee7ff,
         #ffffff
     );
+
+    /* Sets the default text color */
     color: #27233a;
 }
 
+
+/* Styles the main container */
 .container {
+    /* Makes the container responsive */
     width: min(1180px, 92%);
+
+    /* Centers the container */
     margin: auto;
+
+    /* Adds space inside the container */
     padding: 36px 0;
 }
 
+
+/* Styles the hero section */
 .hero {
     text-align: center;
     margin-bottom: 24px;
 }
 
+
+/* Styles the badge */
 .badge {
     display: inline-block;
     padding: 7px 14px;
+
+    /* Creates a rounded badge */
     border-radius: 999px;
+
+    /* Purple background */
     background: #6d4aff;
+
+    /* White text */
     color: white;
+
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
+
+/* Styles the main heading inside the hero section */
 .hero h1 {
     margin: 12px 0 8px;
+
+    /* Makes the heading responsive */
     font-size: clamp(30px, 5vw, 46px);
 }
 
+
+/* Styles the paragraph inside the hero section */
 .hero p {
     margin: 0;
     color: #706b82;
 }
 
+
+/* Styles the card sections */
 .card {
+    /* Gives the card a white background */
     background: rgba(255, 255, 255, 0.96);
+
+    /* Adds a light purple border */
     border: 1px solid #e5defb;
+
+    /* Rounds the corners */
     border-radius: 20px;
+
+    /* Adds spacing inside the card */
     padding: 26px;
+
+    /* Adds spacing between cards */
     margin-bottom: 22px;
+
+    /* Adds a soft shadow */
     box-shadow: 0 12px 35px rgba(73, 55, 135, 0.10);
 }
 
+
+/* Removes the top margin of card headings */
 .card h2 {
     margin-top: 0;
 }
 
+
+/* Creates a two-column layout */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    /* Adds space between the columns and rows */
     gap: 16px;
 }
 
+
+/* Styles form labels */
 label {
     display: flex;
     flex-direction: column;
+
+    /* Adds space between label and input */
     gap: 7px;
+
     font-weight: 600;
     font-size: 14px;
 }
 
+
+/* Styles input, select, and textarea fields */
 input,
 select,
 textarea {
     width: 100%;
+
+    /* Adds a light purple border */
     border: 1px solid #d8d0ee;
+
+    /* Rounds the corners */
     border-radius: 11px;
+
+    /* Adds space inside the fields */
     padding: 12px 13px;
+
+    /* Uses the same font as the page */
     font: inherit;
+
     color: #27233a;
     background: #ffffff;
+
+    /* Removes the default browser outline */
     outline: none;
 }
 
+
+/* Changes the appearance of fields when selected */
 input:focus,
 select:focus,
 textarea:focus {
+    /* Changes the border to purple */
     border-color: #7659ff;
+
+    /* Adds a soft purple glow */
     box-shadow: 0 0 0 3px rgba(118, 89, 255, 0.12);
 }
 
+
+/* Styles all buttons */
 button {
     width: 100%;
+
+    /* Adds space above the button */
     margin-top: 20px;
+
+    /* Removes the default border */
     border: none;
+
+    /* Rounds the button corners */
     border-radius: 12px;
+
+    /* Adds space inside the button */
     padding: 14px;
+
+    /* Purple button background */
     background: #6d4aff;
+
+    /* White button text */
     color: white;
+
     font-size: 16px;
     font-weight: bold;
+
+    /* Changes the mouse pointer when hovering */
     cursor: pointer;
 }
 
+
+/* Changes the button color when the mouse is over it */
 button:hover {
     background: #5838dc;
 }
 
+
+/* Styles the status message */
 .status {
     text-align: center;
+
+    /* Keeps space available even when there is no message */
     min-height: 20px;
+
     color: #5f547a;
     font-size: 14px;
 }
 
+
+/* Creates a two-column layout for encryption results */
 .results {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    /* Adds space between result cards */
     gap: 22px;
 }
 
+
+/* Styles the header of each result section */
 .result-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* Adds space between elements */
     gap: 10px;
 }
 
+
+/* Styles the key size label */
 .key-tag {
     padding: 6px 10px;
+
+    /* Makes the tag rounded */
     border-radius: 999px;
+
+    /* Light purple background */
     background: #eee9ff;
+
+    /* Purple text */
     color: #6041e5;
+
     font-size: 12px;
     font-weight: bold;
 }
 
+
+/* Adds spacing above the output section */
 .output {
     margin-top: 18px;
 }
 
+
+/* Styles headings inside the output section */
 .output h3 {
     margin: 0 0 8px;
     font-size: 14px;
 }
 
+
+/* Styles the textarea used for RSA output */
 textarea {
+    /* Sets the minimum height of the output box */
     min-height: 150px;
+
+    /* Allows the user to resize the textarea vertically */
     resize: vertical;
+
+    /* Gives the textarea a very light background */
     background: #faf9ff;
+
+    /* Uses a monospace font for encrypted text */
     font-family: Consolas, monospace;
+
     font-size: 12px;
 }
 
+
+/* Styles the footer */
 footer {
     text-align: center;
     color: #8b849e;
     font-size: 12px;
+
+    /* Adds spacing around the footer */
     padding: 8px 0 20px;
 }
 
+
+/* =========================================================
+   RESPONSIVE DESIGN
+
+   These styles apply when the screen width is
+   760px or smaller, such as tablets and mobile phones.
+   ========================================================= */
+
 @media (max-width: 760px) {
+
+    /* Changes the form grid from two columns to one */
     .grid {
         grid-template-columns: 1fr;
     }
 
+    /* Changes the results from two columns to one */
     .results {
         grid-template-columns: 1fr;
     }
 
+    /* Reduces card padding on smaller screens */
     .card {
         padding: 20px;
     }
 }
+
+
+
+   
